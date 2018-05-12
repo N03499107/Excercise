@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+const mongoose = require('mongoose');
+const config = require('../../../config/config.js');
 
 @Component({
   selector: 'app-home',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
             
 })
 export class HomeComponent implements OnInit {
-
+  values= '';
   constructor() { }
   ngOnInit() {
+  }
+  onKey(walk:string){
+    this.values = walk;
+    let dbURI = config.dev.URI;
+    
   }
 }
