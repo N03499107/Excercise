@@ -2,24 +2,36 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<div class="container">
-    
+<div class="container"> 
     <div class="row" style="margin-top:7em">
         <div class="col-md-3 col-sm-6">
-                <p style="text-align: center;font-size: 1.5em;">Walk Steps</p>
-            <div class="progress blue" style="margin-top:4em">
+          <!--  <input #walk type="text" (keyup.enter)="onKey(walk.value)"/>
+            <button (click)="onKey(walk.value)">submit</button> -->
+            <p style="text-align: center;font-size: 1.5em;">Walk Steps</p>
+            <div style="margin-top:1em">
                 
+                    <input #walk type="text" class="form-control" name="walkstep" (keyup.enter)="onKey(walk.value)">
+                    <button type="submit" class="btn btn-primary mb-2" style="margin:0.5em 6em" (click)="onKey(walk.value)">ADD</button>
+            
+            </div>
+            
+            <div class="progress blue" style="margin-top:4em">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
                 </span>
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">50%</div>
+                <div class="progress-value">{{values}}</div>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
                <p style="text-align: center;font-size: 1.5em;">Run</p>
+               <div style="margin-top:1em">
+                
+                <input #run type="text" class="form-control" name="run" (keyup.enter)="onKey(run.value)">
+                <button type="submit" class="btn btn-primary mb-2" style="margin:0.5em 6em" (click)="onKey(run.value)">ADD</button>
+          </div>
             <div class="progress yellow" style="margin-top:4em">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -27,11 +39,18 @@
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">75%</div>
+                <div class="progress-value">{{values}}</div>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
-               <p style="text-align: center;font-size: 1.5em;">Sleep</p>
+               <p style="text-align: center;font-size: 1.5em;">Swim</p>
+               <div style="margin-top:1em">
+
+                <input #swim type="text" class="form-control" name="swim" (keyup.enter)="onKey(swim.value)">
+                    <button type="submit" class="btn btn-primary mb-2" style="margin:0.5em 6em" (click)="onKey(swim.value)">ADD</button>
+        
+            </div>
+            
             <div class="progress green" style="margin-top:4em">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -39,11 +58,17 @@
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">90%</div>
+                <div class="progress-value">{{values}}</div>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
-              <p  style="text-align: center;font-size: 1.5em;">Heart Beats</p>
+              <p  style="text-align: center;font-size: 1.5em;">Sleep</p>
+              <div style="margin-top:1em">
+                    <input #sleep type="text" class="form-control" name="sleep" (keyup.enter)="onKey(sleep.value)">
+                    <button type="submit" class="btn btn-primary mb-2" style="margin:0.5em 6em" (click)="onKey(sleep.value)">ADD</button>
+        
+            </div>
+            
             <div class="progress red" style="margin-top:4em">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -51,7 +76,7 @@
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">75%</div>
+                <div class="progress-value">{{values}}</div>
             </div>
         </div>
         

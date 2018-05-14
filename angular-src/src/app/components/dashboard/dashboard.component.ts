@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  values= '';
   constructor() { }
 
   ngOnInit() {
   }
-
+  onKey(walk:string){
+    this.values = walk;
+  }
 }
